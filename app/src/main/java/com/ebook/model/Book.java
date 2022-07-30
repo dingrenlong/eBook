@@ -66,7 +66,8 @@ public class Book {
 
     private void findContents(List<String> paraList) {
         //字符串匹配模式
-        String patternString = "(\\s|\\n)((楔子)|((第)([\\u4e00-\\u9fa5a-zA-Z0-9]{1,7})((章)|(卷)|(节))))[^\n]{0,35}(|\n)";//"(楔子|第)\\S{2,4}\\s\\S{2,}";
+        String patternString = "(\\s|\\n)((楔子)|((第)([\\u4e00-\\u9fa5a-zA-Z0-9]{1,7})((章)|(卷)|(节))))[^\n]{0,35}(|\n)";
+        //"(楔子|第)\\S{2,4}\\s\\S{2,}";
         Pattern pattern = Pattern.compile(patternString);
 
         for (String para:paraList) {
